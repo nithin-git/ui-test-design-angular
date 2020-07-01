@@ -1,1 +1,456 @@
-/* You can add global styles to this file, and also import other style files */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+body{
+	overflow-x: hidden;
+}
+
+a{
+	text-decoration: none;
+	&:hover,&:focus{
+		text-decoration: none;
+	}
+}
+ul{
+	padding: 0;
+	list-style: none;
+}
+
+header{
+	.navbar{
+		background: url('../src/assets/images/header-bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		.navbar-brand{
+			text-transform: uppercase;
+			color: #000;
+			p{
+				margin-bottom: 0;
+				line-height: normal;
+			}
+			span{
+				color: #0036fb;
+				display: block;
+			}
+		}
+		.navbar-nav{
+			-webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+			li{
+				.notification-list{
+					.dropdown-toggle{
+						color: #fff;
+						padding: 25px 10px;
+						margin-right: 15px;
+						display: block;
+						&:after{
+							display: none;
+						}
+						&:focus{
+							outline: none;
+						}
+					}
+					.dropdown-menu{
+						right: 0;
+						left: auto;
+						margin-top: 0;
+					}
+				}
+				.user-dropdown{
+					.dropdown-toggle{
+					    border: 0;
+					    padding: 0;
+					    color: #fff;
+					    background: transparent;
+					    display: -webkit-box;
+				        display: -ms-flexbox;
+				        display: flex;
+				    -webkit-box-align: center;
+				        -ms-flex-align: center;
+				            align-items: center;
+					    .user-img{
+						    width: 45px;
+						    height: 45px;
+						    overflow: hidden;
+						    @include border-radius(50%);
+						    margin-right: 10px;
+					    }
+					    img{
+					    	width: 100%;
+					    }
+					    &:focus{
+					    	outline: none;
+					    }
+					}
+					.dropdown-menu{
+						right: 0;
+						left: auto;
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+	.secondary-nav{
+		display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+	    padding: 0 15px;
+	    border-bottom: 1px solid #000;
+		.left-block{
+			.inner-content{
+				display: -webkit-box;
+		       	display: -ms-flexbox;
+		       	display: flex;
+		    	-webkit-box-align: center;
+		        -ms-flex-align: center;
+	            align-items: center;
+	            .nav-toggler{
+	            	background: #f4f4f4;
+	            	color: #000;
+	            	text-transform: capitalize;
+            	    padding: 10px 15px;
+					display: inline-block;
+					font-size: 18px;
+	            	span{
+	            		margin-right: 5px;
+	            	}
+	            }
+	            .home-link{
+            	    padding: 10px 15px;
+					display: inline-block;
+					font-size: 18px;
+					color: #000;
+	            }
+		        .breadcrumbs{
+					display: -webkit-box;
+			       	display: -ms-flexbox;
+			       	display: flex;
+			       	margin-bottom: 0;
+			       	padding: 10px 15px;
+			       	li{
+			       		&:after{
+			       			content: "/";
+			       			display: inline-block;
+			       			color: #000;
+			       			margin: 0 6px;
+			       			vertical-align: middle;
+			       		}
+			       		a{
+			       			color: #000;
+			       			display: inline-block;
+			       			vertical-align: middle;
+			       		}
+			       		&:last-child{
+			       			&:after{
+			       				display: none;
+			       			}
+			       		}
+			       	}
+		        }
+			}
+		}
+		.right-block{
+			.right-nav{
+				display: -webkit-box;
+		        display: -ms-flexbox;
+		        display: flex;
+		    	-webkit-box-align: center;
+		        -ms-flex-align: center;
+	            align-items: center;
+		    	-webkit-box-pack: end;
+		        -ms-flex-pack: end;
+	            justify-content: flex-end;
+	            margin-bottom: 0;
+	            li{
+	            	&>a{
+	            		color: #000;
+	            		display: inline-block;
+	            		padding:10px 15px;
+	            	}
+	            	.dropdown{
+	            		.dropdown-toggle{
+	            			color: #000;
+	            			padding: 10px 15px;
+	            			&:after{
+	            				color: grey;
+	            			}
+	            		}
+	            		.dropdown-menu{
+	            			right: 0;
+	            			left: auto;
+	            		}
+	            	}
+	            }
+			}
+		}
+	}
+}
+
+body{
+	position: relative;
+	overflow: hidden;
+	.layout-holder{
+		aside{
+			left: -100%;
+			position: absolute;
+			top: 128px;
+			bottom:0;
+			background: #fff;
+			width: 220px;
+			-webkit-transition:all 0.35s ease;
+		    -o-transition:all 0.35s ease;
+		    transition:all 0.35s ease;
+		    left: -100%;
+		    background: #fff;
+		    z-index: 1;
+	        height: calc(100vh - 128px);
+	        overflow: auto;
+		    -webkit-box-shadow: 3px -1px 14px -8px rgba(0,0,0,0.58);
+			-moz-box-shadow: 3px -1px 14px -8px rgba(0,0,0,0.58);
+			box-shadow: 3px -1px 14px -8px rgba(0,0,0,0.58);
+		    &.active{
+		    	left: 0;
+		    }
+		    ul{
+		    	li{
+		    		a{
+		    			text-transform: uppercase;
+		    			font-weight: 700;
+		    			color: #000;
+		    			display: block;
+		    			padding: 7px 15px;
+						-webkit-transition:all 0.35s ease;
+					    -o-transition:all 0.35s ease;
+					    transition:all 0.35s ease;
+		    			&:hover{
+		    				color: #000d85;
+		    			}
+		    		}
+		    	}
+		    }
+		}
+		main{
+			padding-left:0;
+			-webkit-transition:all 0.35s ease;
+		    -o-transition:all 0.35s ease;
+		    transition:all 0.35s ease;
+		    height: calc(100vh - 128px);
+		    overflow: auto;
+			.tab-wrapper{
+				#mainTab{
+					border-bottom: 0;
+					padding: 0 15px;
+					li{
+						a{
+							border:0;
+							border-bottom: 4px solid #d6d6d6;
+							text-transform: capitalize;
+							background: #fff;
+							color: #000;
+							-webkit-transition:all 0.35s ease;
+						    -o-transition:all 0.35s ease;
+						    transition:all 0.35s ease;
+							&.active{
+								border-bottom: 4px solid #000d85;
+							}
+						}
+					}
+				}
+				#mainTabContent{
+					background:#e5e5e5;
+					padding: 15px;
+					.tab-pane{
+						background:#fff;
+						padding: 15px;
+						.tab-inner-content{
+							h2,h3{
+								text-transform: capitalize;
+								color: #000;
+							    font-size: 22px;
+    							line-height: normal;
+								padding-left: 15px;
+							}
+							h3{
+								padding-bottom: 15px;
+								border-bottom: 1px solid #e5e5e5;
+								margin-bottom: 30px;
+							}
+							.client-detail-nav{
+								ul{
+									display: -webkit-box;
+								    display: -ms-flexbox;
+								    display: flex;
+								    -ms-flex-wrap: wrap;
+								        flex-wrap: wrap;
+					        		background: #eaebee;
+					        		padding: 15px 0;
+					        		margin-bottom: 20px;
+							        li{
+							        	a{
+							        		padding: 0 15px;
+							        		text-transform: capitalize;
+							        	}
+							        }
+								}
+							}
+							.form-group{
+								&>label{
+									color: #000;
+									display: block;
+									text-transform: capitalize;
+									sup{
+										color: #f00;
+									    font-size: 20px;
+    									top: 0;
+									}
+								}
+								.form-control{
+									outline:none;
+								    -webkit-box-shadow:none;
+					            	box-shadow:none;
+								}
+							}
+							.btn-primary{
+								background: #499adc;
+								border-color: #499adc;
+								@include border-radius(0);
+						        font-size: 18px;
+							    padding: 5px 15px 8px;
+							    line-height: 28px;
+							    text-transform: capitalize;
+								&:hover{
+									background: darken(#499adc,10%);
+									border-color: darken(#499adc,10%);
+								}
+							}
+							.clone-phone-field{
+								.btn{
+								    margin-top: 31px;
+								    font-size: 26px;
+								    padding: 0px 13px 6px;
+								    line-height: 32px;
+								    min-width: auto;
+								}
+							}
+							.client-blocks{
+								border-bottom: 1px solid #000;
+								padding-bottom: 25px;
+								margin-bottom: 20px;
+							}
+							.address-blocks{
+								background: #f2f3f6;
+								padding: 15px;
+								margin-top:25px;
+								.address-card{
+									background: #f9f9f9;
+									-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+           							box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+									@include border-radius(8px);
+									overflow: hidden;
+									.adress-head{
+										background: #fff;
+										position: relative;
+										padding: 8px 15px;
+										border-bottom: 1px solid #000;
+										h4{
+										    font-size: 18px;
+											font-weight: normal;
+							        		color: #888888;
+							        		margin-bottom: 0;
+										}
+										ul{
+											display: -webkit-inline-box;
+									        display: -ms-inline-flexbox;
+									        display: inline-flex;
+									        -webkit-box-align: center;
+									        -ms-flex-align: center;
+									            align-items: center;
+									        position: absolute;
+										    right: 10px;
+										    margin: auto;
+										    top: 0;
+										    bottom: 0;
+									        li{
+									        	a{
+									        		color: #888888;
+									        		padding: 3px 6px;
+												    display: block;
+												    line-height: normal;
+									        	}
+									        }
+										}
+									}
+									.address-body{
+										padding: 15px;
+										ul{
+											li{
+												position: relative;
+												padding-left: 160px;
+												color: #737373;
+												font-weight: bold;
+												span{
+													position: absolute;
+													left: 0;
+													top: 0;
+													display: block;
+													width: 160px;
+													color: #888888;
+													text-transform:capitalize;
+													font-weight: normal;
+													&:after{
+														content: ":";
+														position: absolute;
+														right:10px;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.btn-secondary{
+				background: #e1e5ec;
+				border-color: #e1e5ec;
+				@include border-radius(0);
+		        font-size: 18px;
+			    padding: 5px 15px 8px;
+			    line-height: 28px;
+			    text-transform: capitalize;
+			    color: #565656;
+				&:hover{
+					background: darken(#e1e5ec,10%);
+					border-color: darken(#e1e5ec,10%);
+				}
+			}
+			.btn{
+				text-transform: capitalize;
+				min-width: 100px;
+				&:hover{
+					outline:none;
+    				box-shadow:none;
+				}
+			}
+		}
+		input{
+			&.date-field{
+				background-image: url('../src/assets/images/calender.png');
+				background-repeat: no-repeat;
+			    background-size: 20px;
+    			background-position: calc(100% - 8px) 6px;
+    			padding-right: 30px;
+			}
+		}
+	}
+}

@@ -1,0 +1,142 @@
+/* line 7, ../scss/style.scss */
+body { overflow-x: hidden; }
+
+/* line 11, ../scss/style.scss */
+a { text-decoration: none; }
+/* line 13, ../scss/style.scss */
+a:hover, a:focus { text-decoration: none; }
+
+/* line 17, ../scss/style.scss */
+ul { padding: 0; list-style: none; }
+
+/* line 23, ../scss/style.scss */
+header .navbar { background: url("../images/header-bg.jpg"); background-repeat: no-repeat; background-size: cover; }
+/* line 27, ../scss/style.scss */
+header .navbar .navbar-brand { text-transform: uppercase; color: #000; }
+/* line 30, ../scss/style.scss */
+header .navbar .navbar-brand p { margin-bottom: 0; line-height: normal; }
+/* line 34, ../scss/style.scss */
+header .navbar .navbar-brand span { color: #0036fb; display: block; }
+/* line 39, ../scss/style.scss */
+header .navbar .navbar-nav { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+/* line 45, ../scss/style.scss */
+header .navbar .navbar-nav li .notification-list .dropdown-toggle { color: #fff; padding: 25px 10px; margin-right: 15px; display: block; }
+/* line 50, ../scss/style.scss */
+header .navbar .navbar-nav li .notification-list .dropdown-toggle:after { display: none; }
+/* line 53, ../scss/style.scss */
+header .navbar .navbar-nav li .notification-list .dropdown-toggle:focus { outline: none; }
+/* line 57, ../scss/style.scss */
+header .navbar .navbar-nav li .notification-list .dropdown-menu { right: 0; left: auto; margin-top: 0; }
+/* line 64, ../scss/style.scss */
+header .navbar .navbar-nav li .user-dropdown .dropdown-toggle { border: 0; padding: 0; color: #fff; background: transparent; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+/* line 75, ../scss/style.scss */
+header .navbar .navbar-nav li .user-dropdown .dropdown-toggle .user-img { width: 45px; height: 45px; overflow: hidden; -webkit-border-radius: 50%; border-radius: 50%; background-clip: padding-box; /* stops bg color from leaking outside the border: */ margin-right: 10px; }
+/* line 82, ../scss/style.scss */
+header .navbar .navbar-nav li .user-dropdown .dropdown-toggle img { width: 100%; }
+/* line 85, ../scss/style.scss */
+header .navbar .navbar-nav li .user-dropdown .dropdown-toggle:focus { outline: none; }
+/* line 89, ../scss/style.scss */
+header .navbar .navbar-nav li .user-dropdown .dropdown-menu { right: 0; left: auto; margin-top: 0; }
+/* line 98, ../scss/style.scss */
+header .secondary-nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 0 15px; border-bottom: 1px solid #000; }
+/* line 108, ../scss/style.scss */
+header .secondary-nav .left-block .inner-content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+/* line 115, ../scss/style.scss */
+header .secondary-nav .left-block .inner-content .nav-toggler { background: #f4f4f4; color: #000; text-transform: capitalize; padding: 10px 15px; display: inline-block; font-size: 18px; }
+/* line 122, ../scss/style.scss */
+header .secondary-nav .left-block .inner-content .nav-toggler span { margin-right: 5px; }
+/* line 126, ../scss/style.scss */
+header .secondary-nav .left-block .inner-content .home-link { padding: 10px 15px; display: inline-block; font-size: 18px; color: #000; }
+/* line 132, ../scss/style.scss */
+header .secondary-nav .left-block .inner-content .breadcrumbs { display: -webkit-box; display: -ms-flexbox; display: flex; margin-bottom: 0; padding: 10px 15px; }
+/* line 139, ../scss/style.scss */
+header .secondary-nav .left-block .inner-content .breadcrumbs li:after { content: "/"; display: inline-block; color: #000; margin: 0 6px; vertical-align: middle; }
+/* line 146, ../scss/style.scss */
+header .secondary-nav .left-block .inner-content .breadcrumbs li a { color: #000; display: inline-block; vertical-align: middle; }
+/* line 152, ../scss/style.scss */
+header .secondary-nav .left-block .inner-content .breadcrumbs li:last-child:after { display: none; }
+/* line 161, ../scss/style.scss */
+header .secondary-nav .right-block .right-nav { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; margin-bottom: 0; }
+/* line 173, ../scss/style.scss */
+header .secondary-nav .right-block .right-nav li > a { color: #000; display: inline-block; padding: 10px 15px; }
+/* line 179, ../scss/style.scss */
+header .secondary-nav .right-block .right-nav li .dropdown .dropdown-toggle { color: #000; padding: 10px 15px; }
+/* line 182, ../scss/style.scss */
+header .secondary-nav .right-block .right-nav li .dropdown .dropdown-toggle:after { color: grey; }
+/* line 186, ../scss/style.scss */
+header .secondary-nav .right-block .right-nav li .dropdown .dropdown-menu { right: 0; left: auto; }
+
+/* line 197, ../scss/style.scss */
+body { position: relative; overflow: hidden; }
+/* line 201, ../scss/style.scss */
+body .layout-holder aside { left: -100%; position: absolute; top: 128px; bottom: 0; background: #fff; width: 220px; -webkit-transition: all 0.35s ease; -o-transition: all 0.35s ease; transition: all 0.35s ease; left: -100%; background: #fff; z-index: 1; height: calc(100vh - 128px); overflow: auto; -webkit-box-shadow: 3px -1px 14px -8px rgba(0, 0, 0, 0.58); -moz-box-shadow: 3px -1px 14px -8px rgba(0, 0, 0, 0.58); box-shadow: 3px -1px 14px -8px rgba(0, 0, 0, 0.58); }
+/* line 219, ../scss/style.scss */
+body .layout-holder aside.active { left: 0; }
+/* line 224, ../scss/style.scss */
+body .layout-holder aside ul li a { text-transform: uppercase; font-weight: 700; color: #000; display: block; padding: 7px 15px; -webkit-transition: all 0.35s ease; -o-transition: all 0.35s ease; transition: all 0.35s ease; }
+/* line 233, ../scss/style.scss */
+body .layout-holder aside ul li a:hover { color: #000d85; }
+/* line 240, ../scss/style.scss */
+body .layout-holder main { padding-left: 0; -webkit-transition: all 0.35s ease; -o-transition: all 0.35s ease; transition: all 0.35s ease; height: calc(100vh - 128px); overflow: auto; }
+/* line 248, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTab { border-bottom: 0; padding: 0 15px; }
+/* line 252, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTab li a { border: 0; border-bottom: 4px solid #d6d6d6; text-transform: capitalize; background: #fff; color: #000; -webkit-transition: all 0.35s ease; -o-transition: all 0.35s ease; transition: all 0.35s ease; }
+/* line 261, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTab li a.active { border-bottom: 4px solid #000d85; }
+/* line 267, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent { background: #e5e5e5; padding: 15px; }
+/* line 270, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane { background: #fff; padding: 15px; }
+/* line 274, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content h2, body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content h3 { text-transform: capitalize; color: #000; font-size: 22px; line-height: normal; padding-left: 15px; }
+/* line 281, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content h3 { padding-bottom: 15px; border-bottom: 1px solid #e5e5e5; margin-bottom: 30px; }
+/* line 287, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .client-detail-nav ul { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; background: #eaebee; padding: 15px 0; margin-bottom: 20px; }
+/* line 297, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .client-detail-nav ul li a { padding: 0 15px; text-transform: capitalize; }
+/* line 305, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .form-group > label { color: #000; display: block; text-transform: capitalize; }
+/* line 309, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .form-group > label sup { color: #f00; font-size: 20px; top: 0; }
+/* line 315, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .form-group .form-control { outline: none; -webkit-box-shadow: none; box-shadow: none; }
+/* line 321, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .btn-primary { background: #499adc; border-color: #499adc; -webkit-border-radius: 0; border-radius: 0; background-clip: padding-box; /* stops bg color from leaking outside the border: */ font-size: 18px; padding: 5px 15px 8px; line-height: 28px; text-transform: capitalize; }
+/* line 329, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .btn-primary:hover { background: #2781cb; border-color: #2781cb; }
+/* line 335, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .clone-phone-field .btn { margin-top: 31px; font-size: 26px; padding: 0px 13px 6px; line-height: 32px; min-width: auto; }
+/* line 343, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .client-blocks { border-bottom: 1px solid #000; padding-bottom: 25px; margin-bottom: 20px; }
+/* line 348, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .address-blocks { background: #f2f3f6; padding: 15px; margin-top: 25px; }
+/* line 352, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .address-blocks .address-card { background: #f9f9f9; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); -webkit-border-radius: 8px; border-radius: 8px; background-clip: padding-box; /* stops bg color from leaking outside the border: */ overflow: hidden; }
+/* line 358, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .address-blocks .address-card .adress-head { background: #fff; position: relative; padding: 8px 15px; border-bottom: 1px solid #000; }
+/* line 363, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .address-blocks .address-card .adress-head h4 { font-size: 18px; font-weight: normal; color: #888888; margin-bottom: 0; }
+/* line 369, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .address-blocks .address-card .adress-head ul { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: absolute; right: 10px; margin: auto; top: 0; bottom: 0; }
+/* line 382, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .address-blocks .address-card .adress-head ul li a { color: #888888; padding: 3px 6px; display: block; line-height: normal; }
+/* line 391, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .address-blocks .address-card .address-body { padding: 15px; }
+/* line 394, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .address-blocks .address-card .address-body ul li { position: relative; padding-left: 160px; color: #737373; font-weight: bold; }
+/* line 399, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .address-blocks .address-card .address-body ul li span { position: absolute; left: 0; top: 0; display: block; width: 160px; color: #888888; text-transform: capitalize; font-weight: normal; }
+/* line 408, ../scss/style.scss */
+body .layout-holder main .tab-wrapper #mainTabContent .tab-pane .tab-inner-content .address-blocks .address-card .address-body ul li span:after { content: ":"; position: absolute; right: 10px; }
+/* line 423, ../scss/style.scss */
+body .layout-holder main .btn-secondary { background: #e1e5ec; border-color: #e1e5ec; -webkit-border-radius: 0; border-radius: 0; background-clip: padding-box; /* stops bg color from leaking outside the border: */ font-size: 18px; padding: 5px 15px 8px; line-height: 28px; text-transform: capitalize; color: #565656; }
+/* line 432, ../scss/style.scss */
+body .layout-holder main .btn-secondary:hover { background: #c2cad8; border-color: #c2cad8; }
+/* line 437, ../scss/style.scss */
+body .layout-holder main .btn { text-transform: capitalize; min-width: 100px; }
+/* line 440, ../scss/style.scss */
+body .layout-holder main .btn:hover { outline: none; box-shadow: none; }
+/* line 447, ../scss/style.scss */
+body .layout-holder input.date-field { background-image: url("../images/calender.png"); background-repeat: no-repeat; background-size: 20px; background-position: calc(100% - 8px) 6px; padding-right: 30px; }
